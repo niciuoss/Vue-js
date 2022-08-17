@@ -4,7 +4,8 @@
   "info": {
     "singularName": "storeitem",
     "pluralName": "storeitems",
-    "displayName": "Storeitem"
+    "displayName": "Storeitem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -22,8 +23,8 @@
         }
       },
       "type": "string",
-      "required": true,
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "Description": {
       "pluginOptions": {
@@ -40,21 +41,21 @@
           "localized": true
         }
       },
-      "type": "float",
-      "required": true
+      "required": true,
+      "type": "float"
     },
     "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     }
   }
 }

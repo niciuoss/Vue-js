@@ -35,7 +35,7 @@
   <div v-bind:key="storeitem.index" v-for="storeitem in storeitems">
     <MDBCol>
       <MDBCard>
-        <MDBCardImg :src="~/Documentos/Strapi/imgs" top alt="..."/>
+        <MDBCardImg :src="~/Documentos/Strapi/Vue-js/imgs/paciencia.png" top alt="..."/>
         <MDBCardBody>
           <MDBCardTitle>{{storeitem.title}}</MDBCardTitle>
           <MDBCardText>
