@@ -1,4 +1,4 @@
-# appstore
+# strapi-front
 
 ## Project setup
 ```

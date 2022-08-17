@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -26,7 +26,7 @@
       "unique": true,
       "required": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -35,7 +35,7 @@
       "type": "text",
       "required": true
     },
-    "Price": {
+    "price": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -44,7 +44,7 @@
       "required": true,
       "type": "float"
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": true,
       "required": false,
