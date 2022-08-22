@@ -4,7 +4,8 @@
   "info": {
     "singularName": "supermercado",
     "pluralName": "supermercados",
-    "displayName": "Supermercado"
+    "displayName": "Supermercado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -44,17 +45,17 @@
       "type": "float"
     },
     "imagem": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     }
   }
 }

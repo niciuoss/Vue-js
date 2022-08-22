@@ -1,7 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <div>{{supermercado}}</div>
+  <div v-for="(listar,i) in supermercado" :key="i">
+    <p>
+      {{listar.attributes.nome}}
+    </p>
+  </div>
 </template>
 
 <script>
@@ -18,7 +22,7 @@ export default defineComponent({
     const supermercado = ref([]);
     
     const nomeItens = async () => api.get("/").then((response)=> 
-    (supermercado.value = response.data.results));
+    (supermercado.value = response.data.data));
 
     onMounted(nomeItens);
 
