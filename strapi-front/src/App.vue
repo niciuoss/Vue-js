@@ -1,18 +1,30 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <StoreItem/>
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>{{supermercado}}</div>
 </template>
 
 <script>
-import StoreItem from './components/StoreItem.vue'
-// import StoreItem from './components/StoreItem.vue';
+// import HelloWorld from './components/HelloWorld.vue'
+import api from './services/api.ts';
+import { onMounted, defineComponent, ref } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'App',
-  components: {
-    StoreItem
-}
-}
+  //   components: {
+  //   HelloWorld
+  // },
+  setup(){
+    const supermercado = ref([]);
+    
+    const nomeItens = async () => api.get("/").then((response)=> 
+    (supermercado.value = response.data.results));
+
+    onMounted(nomeItens);
+
+    return {supermercado};
+  }
+});
 </script>
 
 <style>
