@@ -15,9 +15,7 @@ import { onMounted, defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'App',
-  //   components: {
-  //   HelloWorld
-  // },
+
   setup(){
     const supermercado = ref([]);
     
@@ -27,7 +25,16 @@ export default defineComponent({
     onMounted(nomeItens);
 
     return {supermercado};
+  },
+  
+  postItens(){
+    api.post("/", {nome: 'jogo', descricao: 'item de entretenimento', preco: '23,99'}).then(()=> {
+      console.log('Item cadastrado com sucesso')
+    }).catch((error)=>{
+      console.log(error);
+    });
   }
+
 });
 </script>
 
