@@ -1,4 +1,4 @@
-# vue-front
+# front-vue
 
 ## Project setup
 ```

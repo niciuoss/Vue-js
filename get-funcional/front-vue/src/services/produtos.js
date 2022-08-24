@@ -5,15 +5,15 @@ export default {
     return http.get(`/${id}`)
   },
   produtoId: (id) => {
-    return http.get(`produto/${id}`)
+    return http.get(`items/${id}`)
   },
   apagarProduto: (id) => {
-    return http.delete(`produto/${id}`)
+    return http.delete(`items/${id}`)
   },
   editarProduto: (produto) => {
-    return http.put(`produto`, produto)
+    return http.put(`items`, produto)
   },
   cadastrarProduto: (produto) => {
-    return http.post(`produto`, produto)
+    return http.post(`items`, produto)
   }
 }
